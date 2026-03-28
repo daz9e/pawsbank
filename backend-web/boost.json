@@ -6,7 +6,8 @@
     "mcp": true,
     "nightwatch_mcp": false,
     "packages": [
-        "laravel/fortify"
+        "laravel/fortify",
+        "spatie/boost-spatie-guidelines"
     ],
     "sail": false,
     "skills": [
@@ -14,6 +15,7 @@
         "wayfinder-development",
         "inertia-react-development",
         "tailwindcss-development",
-        "fortify-development"
+        "fortify-development",
+        "spatie-laravel-php-standards"
     ]
 }
