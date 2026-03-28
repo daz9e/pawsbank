@@ -3,7 +3,9 @@
 namespace App\Models;
 
 use App\Data\AccountData;
+use Database\Factories\AccountFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -11,6 +13,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 #[Fillable(['name', 'currency_code'])]
 class Account extends Model
 {
+    /** @use HasFactory<AccountFactory> */
+    use HasFactory;
+
     public $timestamps = false;
 
     const CREATED_AT = 'created_at';

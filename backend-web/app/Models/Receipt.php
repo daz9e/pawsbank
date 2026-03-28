@@ -3,7 +3,9 @@
 namespace App\Models;
 
 use App\Data\ReceiptData;
+use Database\Factories\ReceiptFactory;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -28,6 +30,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 ])]
 class Receipt extends Model
 {
+    /** @use HasFactory<ReceiptFactory> */
+    use HasFactory;
+
     public $timestamps = false;
 
     const CREATED_AT = 'created_at';
