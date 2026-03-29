@@ -16,6 +16,11 @@ class Account extends Model
     /** @use HasFactory<AccountFactory> */
     use HasFactory;
 
+    protected $fillable = [
+        'currency_code',
+        'name',
+    ];
+
     public $timestamps = false;
 
     const CREATED_AT = 'created_at';
