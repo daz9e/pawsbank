@@ -33,6 +33,11 @@ class Account extends Model
             ->withPivot(['role', 'invited_by', 'joined_at']);
     }
 
+    public function invitations(): HasMany
+    {
+        return $this->hasMany(AccountInvitation::class);
+    }
+
     public function receipts(): HasMany
     {
         return $this->hasMany(Receipt::class);
